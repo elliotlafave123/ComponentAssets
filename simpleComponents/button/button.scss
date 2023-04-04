@@ -1,50 +1,99 @@
 @import "../../sass/imports.scss";
 
 .c-button {
-  background: $colour-primary;
-  border-radius: 4px;
-  padding: 10px 18px;
-  border: 2px solid $colour-primary;
-  color: $colour-white;
-  transition: background 0.3s ease;
+  // Settings
+  transition: all 0.3s ease;
   text-decoration: none;
-  display: inline-flex;
-  gap: 0.3rem;
-  align-items: center;
   min-width: max-content;
+  text-align: center;
+  line-height: inherit;
+  vertical-align: middle;
+
+  // flex
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+
+  // font
   font-weight: 600;
   font-family: "JetBrains Mono", monospace;
+  font-size: 16px;
 
   @include respond(tab-port) {
     padding: 8px 10px;
   }
 
+  img {
+    height: 24px;
+  }
+
   i {
-    color: $colour-white !important;
-    font-size: 16px !important;
-    margin: 0 !important;
+    color: $colour-white;
+    font-size: 16px;
+    margin: 0;
     padding: 4px 14px;
   }
 
-  &:hover,
-  &:focus-visible {
-    background: $colour-primary-light;
-    color: $colour-primary;
+  &:hover {
+    cursor: pointer;
+  }
+
+  &--primary {
+    background: $colour-primary;
+    border: 2px solid $colour-primary;
+    color: $colour-white;
+
+    &:hover,
+    &:focus-visible {
+      background: $colour-primary-light;
+      color: $colour-primary;
+    }
   }
 
   &--secondary {
     background: $colour-primary-light;
     border: 2px solid $colour-primary;
-    color: $colour-primary !important;
+    color: $colour-primary;
 
     &:hover,
     &:focus-visible {
       background: $colour-primary;
-      color: $colour-white !important;
+      color: $colour-white;
     }
   }
 
-  img {
-    height: 24px;
+  &--gray {
+    background: $oc-gray-3;
+    border: 2px solid $oc-gray-8;
+    color: $oc-gray-8;
+
+    &:hover,
+    &:focus-visible {
+      background: $oc-gray-8;
+      color: $oc-white;
+    }
+  }
+
+  &--small {
+    padding: 8px 10px;
+    font-size: 15px;
+  }
+
+  &--medium {
+    padding: 10px 18px;
+    font-size: 16px;
+  }
+
+  &--large {
+    padding: 12px 20px;
+    font-size: 17px;
+  }
+
+  &--round {
+    border-radius: 40px;
+  }
+
+  &--semi-round {
+    border-radius: 4px;
   }
 }
