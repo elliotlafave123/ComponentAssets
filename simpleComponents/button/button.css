@@ -1,4 +1,8 @@
+body {
+  font-family: "Open Sans", sans-serif; }
+
 .c-button {
+  border: none;
   transition: all 0.3s ease;
   text-decoration: none;
   min-width: max-content;
@@ -9,8 +13,8 @@
   align-items: center;
   gap: 0.3rem;
   font-weight: 600;
-  font-family: "JetBrains Mono", monospace;
-  font-size: 16px; }
+  font-size: 16px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; }
   @media (max-width: 56.25em) {
     .c-button {
       padding: 8px 10px; } }
@@ -25,25 +29,40 @@
     cursor: pointer; }
   .c-button--primary {
     background: #7149e9;
-    border: 2px solid #7149e9;
     color: white; }
+    .c-button--primary--with-border {
+      border: 2px solid #7149e9;
+      box-sizing: border-box; }
     .c-button--primary:hover, .c-button--primary:focus-visible {
       background: #e5dbff;
       color: #7149e9; }
   .c-button--secondary {
     background: #e5dbff;
-    border: 2px solid #7149e9;
     color: #7149e9; }
+    .c-button--secondary--with-border {
+      border: 2px solid #7149e9;
+      box-sizing: border-box; }
     .c-button--secondary:hover, .c-button--secondary:focus-visible {
       background: #7149e9;
       color: white; }
   .c-button--gray {
     background: #dee2e6;
-    border: 2px solid #343a40;
     color: #343a40; }
+    .c-button--gray--with-border {
+      border: 2px solid #343a40;
+      box-sizing: border-box; }
     .c-button--gray:hover, .c-button--gray:focus-visible {
-      background: #343a40;
+      background: #868e96;
       color: #ffffff; }
+  .c-button--red {
+    background: #e03131;
+    color: white; }
+    .c-button--red--with-border {
+      border: 2px solid #e03131;
+      box-sizing: border-box; }
+    .c-button--red:hover, .c-button--red:focus-visible {
+      background: #ffe3e3;
+      color: #e03131; }
   .c-button--small {
     padding: 8px 10px;
     font-size: 15px; }

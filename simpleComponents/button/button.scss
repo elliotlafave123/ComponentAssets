@@ -2,6 +2,7 @@
 
 .c-button {
   // Settings
+  border: none;
   transition: all 0.3s ease;
   text-decoration: none;
   min-width: max-content;
@@ -16,8 +17,9 @@
 
   // font
   font-weight: 600;
-  font-family: "JetBrains Mono", monospace;
   font-size: 16px;
+
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 
   @include respond(tab-port) {
     padding: 8px 10px;
@@ -40,8 +42,12 @@
 
   &--primary {
     background: $colour-primary;
-    border: 2px solid $colour-primary;
     color: $colour-white;
+
+    &--with-border {
+      border: 2px solid $colour-primary;
+      box-sizing: border-box;
+    }
 
     &:hover,
     &:focus-visible {
@@ -52,8 +58,12 @@
 
   &--secondary {
     background: $colour-primary-light;
-    border: 2px solid $colour-primary;
     color: $colour-primary;
+
+    &--with-border {
+      border: 2px solid $colour-primary;
+      box-sizing: border-box;
+    }
 
     &:hover,
     &:focus-visible {
@@ -64,13 +74,33 @@
 
   &--gray {
     background: $oc-gray-3;
-    border: 2px solid $oc-gray-8;
     color: $oc-gray-8;
+
+    &--with-border {
+      border: 2px solid $oc-gray-8;
+      box-sizing: border-box;
+    }
 
     &:hover,
     &:focus-visible {
-      background: $oc-gray-8;
+      background: $oc-gray-6;
       color: $oc-white;
+    }
+  }
+
+  &--red {
+    background: $oc-red-8;
+    color: $colour-white;
+
+    &--with-border {
+      border: 2px solid $oc-red-8;
+      box-sizing: border-box;
+    }
+
+    &:hover,
+    &:focus-visible {
+      background: $oc-red-1;
+      color: $oc-red-8;
     }
   }
 

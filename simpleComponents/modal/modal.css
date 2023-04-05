@@ -1,0 +1,58 @@
+body {
+  font-family: "Open Sans", sans-serif; }
+
+.c-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  min-width: 300px;
+  max-width: 100%;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  color: #ffffff;
+  z-index: 1000;
+  padding: 20px 25px; }
+  .c-modal__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px; }
+  .c-modal__title {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0; }
+  .c-modal__close-icon {
+    fill: #555;
+    width: 24px;
+    height: 24px; }
+  .c-modal__body {
+    margin-bottom: 16px; }
+  .c-modal__paragraph {
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0; }
+  .c-modal__footer {
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px; }
+  .c-modal--small {
+    max-width: 300px; }
+  .c-modal--medium {
+    max-width: 500px; }
+  .c-modal--large {
+    max-width: 700px; }
+  .c-modal--square {
+    border-radius: 0; }
+  .c-modal--round {
+    border-radius: 8px; }
+  .c-modal--semi-round {
+    border-radius: 4px; }
+  .c-modal--primary {
+    background-color: #343a40; }
+    .c-modal--primary--with-border {
+      border: 2px solid #868e96;
+      box-sizing: border-box; }
