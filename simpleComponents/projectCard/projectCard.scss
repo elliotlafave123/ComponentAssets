@@ -1,2 +1,93 @@
+@import "../../sass/imports.scss";
+
+$colour-border: #4b4b4b;
+$colour-card: #212529;
+$colour-card-hover: #2c2f36;
+
 .c-project-card {
+  background: $colour-card;
+  border: 1px solid $colour-border;
+  max-width: 300px;
+  position: relative;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.06);
+
+  @include respond(phone) {
+    max-width: 100%;
+  }
+
+  &__content {
+    --card-padding-x: 16px;
+    --card-padding-y: 10px;
+
+    .c-project-card__image {
+      width: 100%;
+      height: 180px;
+    }
+
+    .c-project-card__title {
+      font-size: 16px;
+      font-weight: 500;
+      margin: 16px var(--card-padding-x) 10px;
+    }
+
+    .c-project-card__paragraph {
+      font-size: 0.95rem;
+      margin: 0 var(--card-padding-x) var(--card-padding-y);
+    }
+  }
+
+  &__tags {
+    margin: 14px var(--card-padding-x) var(--card-padding-y);
+    align-items: center;
+    display: flex;
+    gap: 7px 12px;
+    flex-wrap: wrap;
+  }
+
+  &__hover {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+
+    &-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 22px;
+    }
+  }
+
+  &:hover,
+  &:focus,
+  &:focus-within {
+    .c-project-card__hover {
+      display: flex;
+    }
+  }
+
+  &--round {
+    @include corner(14px);
+
+    img {
+      border-radius: 14px 14px 0 0;
+    }
+  }
+
+  &--semi-round {
+    @include corner(4px);
+
+    img {
+      border-radius: 4px 4px 0 0;
+    }
+  }
+
+  &--square {
+    @include corner(0);
+  }
 }

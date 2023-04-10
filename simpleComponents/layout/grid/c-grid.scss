@@ -1,0 +1,15 @@
+@import "../../../sass/imports.scss";
+
+.c-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 1rem;
+  padding: 20px;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+
+  @include respond(phone) {
+    grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+  }
+}

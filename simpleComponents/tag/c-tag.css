@@ -1,0 +1,29 @@
+body {
+  font-family: "Open Sans", sans-serif; }
+
+body {
+  color: #ffffff; }
+
+.c-tag {
+  display: flex;
+  align-items: center;
+  width: max-content;
+  color: white; }
+  .c-tag i {
+    font-size: 15px;
+    margin-right: 5px; }
+  .c-tag .tag__text {
+    font-size: 12px; }
+  .c-tag--button {
+    padding: 10px 20px;
+    border: 1px solid #4b4b4b;
+    background-color: #212529; }
+    .c-tag--button i {
+      font-size: 16px;
+      margin-right: 10px; }
+    .c-tag--button .tag__text {
+      font-size: 16px; }
+    .c-tag--button:hover {
+      background-color: #2c2f36;
+      border: 1px solid #868e96;
+      cursor: pointer; }

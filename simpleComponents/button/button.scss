@@ -116,12 +116,12 @@
 
   // Button Corners
   &--round {
-    @include button-corner(40px);
+    @include corner(40px);
   }
   &--semi-round {
-    @include button-corner(4px);
+    @include corner(4px);
   }
   &--square {
-    @include button-corner(0);
+    @include corner(0);
   }
 }

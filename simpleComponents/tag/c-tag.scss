@@ -1,0 +1,43 @@
+@import "../../sass/imports.scss";
+
+$colour-border: #4b4b4b;
+$colour-card: #212529;
+$colour-card-hover: #2c2f36;
+$colour-border-hover: #868e96;
+
+.c-tag {
+  display: flex;
+  align-items: center;
+  width: max-content;
+  color: $colour-white;
+
+  i {
+    font-size: 15px;
+    margin-right: 5px;
+  }
+
+  .tag__text {
+    font-size: 12px;
+  }
+
+  &--button {
+    padding: 10px 20px;
+    border: 1px solid $colour-border;
+    background-color: $colour-card;
+
+    i {
+      font-size: 16px;
+      margin-right: 10px;
+    }
+
+    .tag__text {
+      font-size: 16px;
+    }
+
+    &:hover {
+      background-color: $colour-card-hover;
+      border: 1px solid $colour-border-hover;
+      cursor: pointer;
+    }
+  }
+}
