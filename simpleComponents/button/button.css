@@ -11,7 +11,6 @@ body {
   vertical-align: middle;
   display: inline-flex;
   align-items: center;
-  gap: 0.3rem;
   font-weight: 600;
   font-size: 16px;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; }
@@ -22,57 +21,114 @@ body {
     height: 24px; }
   .c-button i {
     color: white;
-    font-size: 16px;
     margin: 0;
-    padding: 4px 14px; }
+    line-height: 1; }
   .c-button:hover {
     cursor: pointer; }
+  .c-button--full-width {
+    width: 100%; }
+  .c-button--center-text {
+    text-align: center;
+    justify-content: center; }
   .c-button--primary {
     background: #7149e9;
     color: white; }
+    .c-button--primary i {
+      color: white; }
     .c-button--primary--with-border {
       border: 2px solid #7149e9;
       box-sizing: border-box; }
     .c-button--primary:hover, .c-button--primary:focus-visible {
       background: #e5dbff;
       color: #7149e9; }
-  .c-button--secondary {
+      .c-button--primary:hover i, .c-button--primary:focus-visible i {
+        color: #7149e9; }
+  .c-button--primary-secondary {
     background: #e5dbff;
     color: #7149e9; }
-    .c-button--secondary--with-border {
+    .c-button--primary-secondary i {
+      color: #7149e9; }
+    .c-button--primary-secondary--with-border {
       border: 2px solid #7149e9;
       box-sizing: border-box; }
-    .c-button--secondary:hover, .c-button--secondary:focus-visible {
+    .c-button--primary-secondary:hover, .c-button--primary-secondary:focus-visible {
       background: #7149e9;
       color: white; }
+      .c-button--primary-secondary:hover i, .c-button--primary-secondary:focus-visible i {
+        color: white; }
   .c-button--gray {
-    background: #dee2e6;
-    color: #343a40; }
+    background: #495057;
+    color: #ffffff; }
+    .c-button--gray i {
+      color: #ffffff; }
     .c-button--gray--with-border {
-      border: 2px solid #343a40;
+      border: 2px solid #495057;
       box-sizing: border-box; }
     .c-button--gray:hover, .c-button--gray:focus-visible {
-      background: #868e96;
+      background: #f1f3f5;
+      color: #495057; }
+      .c-button--gray:hover i, .c-button--gray:focus-visible i {
+        color: #495057; }
+  .c-button--gray-secondary {
+    background: #dee2e6;
+    color: #495057; }
+    .c-button--gray-secondary i {
+      color: #495057; }
+    .c-button--gray-secondary--with-border {
+      border: 2px solid #495057;
+      box-sizing: border-box; }
+    .c-button--gray-secondary:hover, .c-button--gray-secondary:focus-visible {
+      background: #495057;
       color: #ffffff; }
+      .c-button--gray-secondary:hover i, .c-button--gray-secondary:focus-visible i {
+        color: #ffffff; }
   .c-button--red {
     background: #e03131;
     color: white; }
+    .c-button--red i {
+      color: white; }
     .c-button--red--with-border {
       border: 2px solid #e03131;
       box-sizing: border-box; }
     .c-button--red:hover, .c-button--red:focus-visible {
       background: #ffe3e3;
       color: #e03131; }
+      .c-button--red:hover i, .c-button--red:focus-visible i {
+        color: #e03131; }
+  .c-button--red-secondary {
+    background: #ffe3e3;
+    color: #e03131; }
+    .c-button--red-secondary i {
+      color: #e03131; }
+    .c-button--red-secondary--with-border {
+      border: 2px solid #e03131;
+      box-sizing: border-box; }
+    .c-button--red-secondary:hover, .c-button--red-secondary:focus-visible {
+      background: #e03131;
+      color: #ffffff; }
+      .c-button--red-secondary:hover i, .c-button--red-secondary:focus-visible i {
+        color: #ffffff; }
   .c-button--small {
     padding: 8px 10px;
-    font-size: 15px; }
+    font-size: 15px;
+    gap: 0.45rem; }
+    .c-button--small i {
+      font-size: 15px; }
   .c-button--medium {
     padding: 10px 18px;
-    font-size: 16px; }
+    font-size: 16px;
+    gap: 0.6rem; }
+    .c-button--medium i {
+      font-size: 16px; }
   .c-button--large {
     padding: 12px 20px;
-    font-size: 17px; }
+    font-size: 17px;
+    gap: 0.7rem; }
+    .c-button--large i {
+      font-size: 17px; }
   .c-button--round {
     border-radius: 40px; }
   .c-button--semi-round {
     border-radius: 4px; }
+  .c-button--square {
+    border-radius: 0; }

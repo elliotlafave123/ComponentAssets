@@ -13,7 +13,6 @@
   // flex
   display: inline-flex;
   align-items: center;
-  gap: 0.3rem;
 
   // font
   font-weight: 600;
@@ -31,99 +30,98 @@
 
   i {
     color: $colour-white;
-    font-size: 16px;
     margin: 0;
-    padding: 4px 14px;
+    line-height: 1;
   }
 
   &:hover {
     cursor: pointer;
   }
 
+  &--full-width {
+    width: 100%;
+  }
+
+  &--center-text {
+    text-align: center;
+    justify-content: center;
+  }
+
+  // Button Variants
   &--primary {
-    background: $colour-primary;
-    color: $colour-white;
-
-    &--with-border {
-      border: 2px solid $colour-primary;
-      box-sizing: border-box;
-    }
-
-    &:hover,
-    &:focus-visible {
-      background: $colour-primary-light;
-      color: $colour-primary;
-    }
+    @include button-variant(
+      $colour-primary,
+      $colour-white,
+      $colour-primary,
+      $colour-primary-light,
+      $colour-primary
+    );
   }
-
-  &--secondary {
-    background: $colour-primary-light;
-    color: $colour-primary;
-
-    &--with-border {
-      border: 2px solid $colour-primary;
-      box-sizing: border-box;
-    }
-
-    &:hover,
-    &:focus-visible {
-      background: $colour-primary;
-      color: $colour-white;
-    }
+  &--primary-secondary {
+    @include button-variant(
+      $colour-primary-light,
+      $colour-primary,
+      $colour-primary,
+      $colour-primary,
+      $colour-white
+    );
   }
-
   &--gray {
-    background: $oc-gray-3;
-    color: $oc-gray-8;
-
-    &--with-border {
-      border: 2px solid $oc-gray-8;
-      box-sizing: border-box;
-    }
-
-    &:hover,
-    &:focus-visible {
-      background: $oc-gray-6;
-      color: $oc-white;
-    }
+    @include button-variant(
+      $oc-gray-7,
+      $oc-white,
+      $oc-gray-7,
+      $oc-gray-1,
+      $oc-gray-7
+    );
   }
-
+  &--gray-secondary {
+    @include button-variant(
+      $oc-gray-3,
+      $oc-gray-7,
+      $oc-gray-7,
+      $oc-gray-7,
+      $oc-white
+    );
+  }
   &--red {
-    background: $oc-red-8;
-    color: $colour-white;
-
-    &--with-border {
-      border: 2px solid $oc-red-8;
-      box-sizing: border-box;
-    }
-
-    &:hover,
-    &:focus-visible {
-      background: $oc-red-1;
-      color: $oc-red-8;
-    }
+    @include button-variant(
+      $oc-red-8,
+      $colour-white,
+      $oc-red-8,
+      $oc-red-1,
+      $oc-red-8
+    );
+  }
+  &--red-secondary {
+    @include button-variant(
+      $oc-red-1,
+      $oc-red-8,
+      $oc-red-8,
+      $oc-red-8,
+      $oc-white
+    );
   }
 
+  // Button Sizes
   &--small {
-    padding: 8px 10px;
-    font-size: 15px;
+    @include button-size(8px 10px, 15px, 15px, 0.45rem);
   }
-
   &--medium {
-    padding: 10px 18px;
-    font-size: 16px;
+    @include button-size(10px 18px, 16px, 16px, 0.6rem);
   }
-
   &--large {
-    padding: 12px 20px;
-    font-size: 17px;
+    @include button-size(12px 20px, 17px, 17px, 0.7rem);
   }
 
+  // Button Corners
   &--round {
-    border-radius: 40px;
+    @include button-corner(40px);
   }
-
   &--semi-round {
-    border-radius: 4px;
+    @include button-corner(4px);
+  }
+  &--square {
+    @include button-corner(0);
   }
 }
