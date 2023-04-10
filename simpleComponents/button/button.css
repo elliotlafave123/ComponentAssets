@@ -1,6 +1,9 @@
 body {
   font-family: "Open Sans", sans-serif; }
 
+body {
+  color: #ffffff; }
+
 .c-button {
   border: none;
   transition: all 0.3s ease;

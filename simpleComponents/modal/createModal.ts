@@ -10,7 +10,7 @@ const confirmModal = new Modal(
 console.log(confirmModal);
 
 document.addEventListener("DOMContentLoaded", function () {
-  const buttonElements = document.querySelectorAll(".c-button");
+  const buttonElements = document.querySelectorAll(".c-button.openModal");
 
   buttonElements.forEach((button) => {
     button.addEventListener("click", function () {
