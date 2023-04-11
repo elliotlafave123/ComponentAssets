@@ -1,10 +1,4 @@
-@mixin button-variant(
-  $bg-color,
-  $text-color,
-  $border-color: null,
-  $bg-hover-color: null,
-  $text-hover-color: null
-) {
+@mixin button-variant($bg-color, $text-color, $border-color: null, $bg-hover-color: null, $text-hover-color: null) {
   background: $bg-color;
   color: $text-color;
 
@@ -20,7 +14,7 @@
   &:hover,
   &:focus-visible {
     background: if($bg-hover-color, $bg-hover-color, $text-color);
-    color: if($text-hover-color, $text-hover-color, $bg-color);
+    color: if($text-hover-color, $text-hover-color, $bg-color) !important;
 
     i {
       color: if($text-hover-color, $text-hover-color, $bg-color);

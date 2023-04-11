@@ -48,59 +48,27 @@
   }
 
   // Button Variants
+  &--ghost {
+    @include button-variant(rgba(0, 0, 0, 0), $oc-white, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), $oc-white);
+    box-shadow: none;
+  }
   &--primary {
-    @include button-variant(
-      $colour-primary,
-      $colour-white,
-      $colour-primary,
-      $colour-primary-light,
-      $colour-primary
-    );
+    @include button-variant($colour-primary, $colour-white, $colour-primary, $colour-primary-light, $colour-primary);
   }
   &--primary-secondary {
-    @include button-variant(
-      $colour-primary-light,
-      $colour-primary,
-      $colour-primary,
-      $colour-primary,
-      $colour-white
-    );
+    @include button-variant($colour-primary-light, $colour-primary, $colour-primary, $colour-primary, $colour-white);
   }
   &--gray {
-    @include button-variant(
-      $oc-gray-7,
-      $oc-white,
-      $oc-gray-7,
-      $oc-gray-1,
-      $oc-gray-7
-    );
+    @include button-variant($oc-gray-7, $oc-white, $oc-gray-7, $oc-gray-1, $oc-gray-7);
   }
   &--gray-secondary {
-    @include button-variant(
-      $oc-gray-3,
-      $oc-gray-7,
-      $oc-gray-7,
-      $oc-gray-7,
-      $oc-white
-    );
+    @include button-variant($oc-gray-3, $oc-gray-7, $oc-gray-7, $oc-gray-7, $oc-white);
   }
   &--red {
-    @include button-variant(
-      $oc-red-8,
-      $colour-white,
-      $oc-red-8,
-      $oc-red-1,
-      $oc-red-8
-    );
+    @include button-variant($oc-red-8, $colour-white, $oc-red-8, $oc-red-1, $oc-red-8);
   }
   &--red-secondary {
-    @include button-variant(
-      $oc-red-1,
-      $oc-red-8,
-      $oc-red-8,
-      $oc-red-8,
-      $oc-white
-    );
+    @include button-variant($oc-red-1, $oc-red-8, $oc-red-8, $oc-red-8, $oc-white);
   }
 
   // Button Sizes
