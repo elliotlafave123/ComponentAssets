@@ -28,11 +28,14 @@ $colour-card-hover: #2c2f36;
       font-size: 16px;
       font-weight: 500;
       margin: 16px var(--card-padding-x) 10px;
+      color: $colour-white;
+      font-family: "Open Sans", sans-serif;
     }
 
     .c-project-card__paragraph {
-      font-size: 0.95rem;
+      font-size: 15px;
       margin: 0 var(--card-padding-x) var(--card-padding-y);
+      font-family: "Open Sans", sans-serif;
     }
   }
 

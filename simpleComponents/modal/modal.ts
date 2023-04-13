@@ -1,4 +1,10 @@
 export class Modal {
+  titleText: string;
+  messageText: string;
+  confirmText: string;
+  cancelText: string;
+  modalElement: HTMLDivElement;
+
   constructor(titleText, messageText, confirmText, cancelText) {
     this.titleText = titleText;
     this.messageText = messageText;
