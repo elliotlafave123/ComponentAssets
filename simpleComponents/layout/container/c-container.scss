@@ -1,0 +1,16 @@
+@mixin centered-container {
+  padding-left: calc((100vw - 1300px) / 2);
+  padding-right: calc((100vw - 1300px) / 2);
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+
+  @include respond(tab-port) {
+    padding: 2rem 2.5rem 3rem 2.5rem;
+  }
+}
+
+@import "../../../sass/imports.scss";
+
+.c-container {
+  @include centered-container;
+}
