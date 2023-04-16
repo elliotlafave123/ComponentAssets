@@ -1,3 +1,6 @@
+@import "../container/c-container.scss";
+@import "../../../sass/imports.scss";
+
 .c-footer {
   padding-top: 8rem;
   background-color: #000000;
@@ -14,12 +17,9 @@
   &__head {
     display: flex;
     align-items: center;
-    padding-left: calc((100vw - 1140px) / 2);
-    padding-right: calc((100vw - 1140px) / 2);
+    @include container-x;
 
     @include respond(tab-port) {
-      padding-left: 2.5rem;
-      padding-right: 2.5rem;
       flex-direction: column;
       align-items: flex-start;
     }
@@ -58,11 +58,10 @@
   }
 
   &__body {
+    @include container-x;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-left: calc((100vw - 1140px) / 2);
-    padding-right: calc((100vw - 1140px) / 2);
     padding-top: 56px;
     padding-bottom: 45px;
 
@@ -81,8 +80,6 @@
     @include respond(tab-port) {
       flex-direction: column;
       gap: 51px 0;
-      padding-left: 2.5rem;
-      padding-right: 2.5rem;
     }
   }
 
@@ -107,16 +104,15 @@
 
     @include respond(tab-port) {
       align-items: flex-start;
-      transform: translateX(0) translateY(0);
+      transform: translateX(-18px);
     }
   }
 
   &__branding {
+    @include container-x;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-left: calc((100vw - 1170px) / 2);
-    padding-right: calc((100vw - 1140px) / 2);
     padding-bottom: 20px;
     padding-top: 20px;
     background-color: #000000;
@@ -126,8 +122,6 @@
       align-items: flex-start;
       justify-content: flex-start;
       gap: 30px 0;
-      padding-left: 2.5rem;
-      padding-right: 2.5rem;
     }
   }
 
@@ -138,7 +132,7 @@
 
     i {
       margin-right: 1px;
-      font-size: 14px;
+      font-size: 1.3rem;
     }
 
     img {
@@ -148,6 +142,7 @@
 
     p {
       margin-bottom: 0;
+      font-size: 1.4rem;
     }
   }
 

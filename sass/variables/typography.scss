@@ -153,17 +153,17 @@ p {
   margin-bottom: 1.5rem;
 
   @include respond(tab-land) {
-    font-size: 0.9rem;
+    font-size: 1.6rem;
     margin-bottom: 1.4rem;
   }
 
   @include respond(tab-port) {
-    font-size: 0.8rem;
+    font-size: 1.6rem;
     margin-bottom: 1.3rem;
   }
 
   @include respond(phone) {
-    font-size: 0.7rem;
+    font-size: 1.6rem;
     margin-bottom: 1.2rem;
   }
 }

@@ -1,3 +1,5 @@
+@import "../container/c-container.scss";
+
 .c-strip {
   display: flex;
   align-items: center;
@@ -10,8 +12,6 @@
     align-items: flex-start;
     justify-content: flex-start;
     gap: 30px 0;
-    padding-left: 2.5rem;
-    padding-right: 2.5rem;
   }
 
   h2 {

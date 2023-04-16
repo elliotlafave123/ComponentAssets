@@ -5,8 +5,8 @@
   padding-bottom: 5rem;
 
   @include respond(laptop) {
-    padding-left: calc((100vw - 1200px) / 2);
-    padding-right: calc((100vw - 1200px) / 2);
+    padding-left: calc((100vw - 1100px) / 2);
+    padding-right: calc((100vw - 1100px) / 2);
   }
 
   @include respond(tab-land) {
@@ -29,8 +29,8 @@
   padding-right: calc((100vw - 1180px) / 2);
 
   @include respond(laptop) {
-    padding-left: calc((100vw - 1200px) / 2 - 4rem);
-    padding-right: calc((100vw - 1200px) / 2 - 4rem);
+    padding-left: calc((100vw - 1100px) / 2);
+    padding-right: calc((100vw - 1100px) / 2);
   }
 
   @include respond(tab-land) {
@@ -55,6 +55,8 @@
 }
 
 #main {
+  margin-top: 12rem;
+
   @include respond(tab-port) {
     margin-top: 5rem;
   }
