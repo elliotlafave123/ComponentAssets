@@ -1,29 +1,30 @@
+@import "../container/c-container.scss";
 @import "../../../sass/imports.scss";
 
 .c-header {
+  @include container-x;
   display: flex;
   flex-direction: column;
   background-color: #000000;
   color: #ffffff;
   font-family: "Roboto", sans-serif;
-  padding-left: calc((100vw - 1140px) / 2);
-  padding-right: calc((100vw - 1140px) / 2);
   position: relative;
+  top: 0;
   z-index: 100;
+  width: 100vw;
 
   @include respond(tab-port) {
-    padding-left: 2.5rem;
-    padding-right: 2.5rem;
+    position: fixed;
   }
 
   &__top {
     display: flex;
     justify-content: space-between;
-    padding: 10px 20px;
+    padding: 10px 0;
 
     @include respond(tab-port) {
-      padding: 10px 0;
       flex-direction: column;
+      width: 100%;
 
       .c-header--open & {
         gap: 33px;
@@ -34,23 +35,22 @@
   &__bottom {
     display: flex;
     justify-content: space-between;
-    padding: 10px 20px 0 20px;
+    padding: 16px 0 0 0;
     background-color: #000000;
 
     @include respond(tab-port) {
       display: none;
       box-sizing: border-box;
       position: absolute;
-      top: 121px;
+      top: 111px;
       left: 0;
       width: 100vw;
-      height: calc(100vh - 121px);
+      height: calc(100vh - 111px);
       flex-direction: column;
       justify-content: flex-start;
       background-color: #000000;
       padding-left: 2.5rem;
       padding-right: 2.5rem;
-      padding-top: 25px;
 
       .c-header--open & {
         display: flex;
@@ -67,10 +67,11 @@
       display: flex;
       align-items: center;
       text-decoration: none;
-      
+
       p {
         color: #ffffff;
         font-size: 18px;
+        margin-bottom: 0;
       }
 
       &:hover {
@@ -89,6 +90,7 @@
   &__authentication {
     display: flex;
     align-items: center;
+    z-index: 200;
 
     &-link {
       color: #ffffff;
@@ -264,7 +266,7 @@
 }
 
 .c-mobile-menu-toggle {
-  position: absolute;
+  position: fixed;
   top: 21px;
   right: 2.5rem;
   background-color: transparent;
