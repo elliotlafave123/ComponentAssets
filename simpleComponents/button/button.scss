@@ -21,6 +21,17 @@
 
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 
+  &:disabled {
+    opacity: 0.5;
+    pointer-events: none;
+    cursor: not-allowed;
+
+    &:hover,
+    &:focus-visible {
+      opacity: 0.5;
+    }
+  }
+
   @include respond(tab-port) {
     padding: 8px 10px;
   }

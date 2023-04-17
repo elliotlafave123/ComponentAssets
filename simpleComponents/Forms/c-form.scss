@@ -4,6 +4,10 @@
     flex: 1 1 auto;
     flex-direction: column;
     margin-bottom: 5rem;
+
+    &--small-margin {
+      margin-bottom: 0.5rem;
+    }
   }
 
   &__label,
