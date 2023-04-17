@@ -27,7 +27,7 @@
 
   &__head-site-name {
     font-weight: 400;
-    font-size: 18px;
+    font-size: 1.125rem;
     line-height: 21px;
 
     @include respond(tab-port) {
@@ -42,7 +42,7 @@
 
     a {
       font-weight: 400;
-      font-size: 16px;
+      font-size: 1rem;
       line-height: 19px;
     }
 
@@ -90,7 +90,7 @@
 
     a {
       font-weight: 400;
-      font-size: 14px;
+      font-size: 0.875rem;
       line-height: 16px;
     }
   }
@@ -129,23 +129,23 @@
   &__branding-logo {
     display: flex;
     align-items: center;
-    gap: 0 16px;
+    gap: 0 0.75rem;
     transform: translateX(-10px);
     padding-top: 20px;
 
     i {
       margin-right: 1px;
-      font-size: 1.3rem;
+      font-size: 0.875rem;
     }
 
     img {
-      width: 53px;
-      height: 53px;
+      width: 40px;
+      height: 40px;
     }
 
     p {
-      margin-bottom: 0;
-      font-size: 1.4rem;
+      margin: 0;
+      font-size: 1rem;
     }
   }
 
@@ -155,7 +155,7 @@
 
     a {
       font-weight: 400;
-      font-size: 14px;
+      font-size: 0.875rem;
       line-height: 16px;
     }
   }

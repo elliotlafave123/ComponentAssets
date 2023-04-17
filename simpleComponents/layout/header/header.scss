@@ -81,8 +81,8 @@
 
       p {
         color: #ffffff;
-        font-size: 18px;
-        margin-bottom: 0;
+        font-size: 1.125rem;
+        margin: 0;
       }
 
       &:hover {
@@ -105,7 +105,7 @@
 
     &-link {
       color: #ffffff;
-      font-size: 16px;
+      font-size: 1rem;
       text-decoration: none;
       margin-left: 15px;
 
@@ -179,7 +179,7 @@
 
     &-link {
       color: #ffffff;
-      font-size: 16px;
+      font-size: 1rem;
       text-decoration: none;
       padding: 10px 25px;
       display: block;
@@ -191,7 +191,7 @@
 
       .c-header__chevron {
         transition: transform 0.1s;
-        font-size: 12px;
+        font-size: 0.75rem;
         margin: auto 0 auto 7px;
 
         @include respond(tab-port) {
@@ -260,11 +260,11 @@
     width: 1px;
     height: 1px;
     overflow: hidden;
+    font-size: 0.875rem;
 
     &:focus {
       color: #ffffff;
       text-decoration: none;
-      font-size: 14px;
       height: auto;
       position: static;
       width: auto;
@@ -287,7 +287,7 @@
   padding: 0;
   margin: 0;
   display: none;
-  font-size: 25px;
+  font-size: 1.55rem;
   z-index: 101;
 
   &:hover {
