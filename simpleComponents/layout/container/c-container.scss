@@ -52,6 +52,10 @@
 
 .c-container {
   @include centered-container;
+
+  &--small {
+    width: 700px;
+  }
 }
 
 #main {
