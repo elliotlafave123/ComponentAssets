@@ -1,5 +1,6 @@
 .c-flex-strip {
   display: flex;
+  flex-wrap: wrap;
 
   &--row {
     flex-direction: row;

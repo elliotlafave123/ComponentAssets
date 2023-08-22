@@ -1,0 +1,85 @@
+@import "../../sass/imports.scss";
+
+.c-history {
+  display: flex;
+  width: 620px;
+  max-width: 100%;
+
+  h3,
+  h4,
+  p {
+    margin: 0 0 3px 0;
+  }
+
+  &__title {
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+    color: $colour-white;
+  }
+
+  h4 {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    color: #e2e2e2;
+  }
+
+  p {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 15px;
+    color: #b0b0b0;
+  }
+
+  span {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 15px;
+    color: #e2e2e2;
+
+    &.bold {
+      font-weight: 600;
+      color: $colour-white;
+    }
+  }
+
+  &__image {
+    width: 50px;
+    height: 50px;
+    margin-top: 3px;
+  }
+
+  &__content {
+    margin-left: 14px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    & p.c-history__text {
+      font-family: "Roboto";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 13px;
+      line-height: 20px;
+      color: $colour-white;
+      margin-top: 10px;
+    }
+  }
+
+  &__skills {
+    margin-top: 12px;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3px 0.4rem;
+  }
+}
