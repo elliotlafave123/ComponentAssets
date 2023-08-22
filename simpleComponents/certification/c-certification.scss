@@ -1,0 +1,77 @@
+.c-certification {
+  --imageWidth: 80px;
+  --imageHeight: 100px;
+  --topMargin: 50px;
+  --maxWidth: 400px;
+
+  @include respond(phone) {
+    --topMargin: 30px;
+    --gap: 20px;
+  }
+
+  max-width: var(--maxWidth);
+  margin-top: var(--topMargin);
+  border-radius: 8px;
+
+  &__image {
+    height: var(--imageHeight);
+    width: var(--imageWidth);
+    flex-shrink: 0;
+
+    @include respond(phone) {
+      height: calc(var(--imageHeight) / 2);
+      width: calc(var(--imageWidth) / 2);
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: #ffffff;
+  }
+
+  &__title {
+    line-height: 1.4;
+    margin-bottom: var(--gap);
+  }
+
+  &__description {
+    line-height: 1.4;
+    margin-top: unset;
+    margin-bottom: var(--gap);
+  }
+
+  &__date {
+    font-size: 1rem;
+    line-height: 1.4;
+    font-style: italic;
+    margin-bottom: var(--gap);
+
+    @include respond(phone) {
+      font-size: 1.2rem;
+    }
+  }
+
+  &__download {
+    font-size: 1.1rem;
+    text-decoration: none;
+    color: #fff;
+    cursor: pointer;
+    margin-top: 10px;
+    font-weight: 600;
+
+    i {
+      color: #f40f02;
+      margin-left: 8px;
+    }
+
+    &:hover {
+      text-decoration: underline;
+
+      i {
+        color: #fa352b;
+      }
+    }
+  }
+}
