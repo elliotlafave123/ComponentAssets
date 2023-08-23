@@ -1,18 +1,19 @@
 {
-  "name": "componentassets",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "compile-scss": "for /r ./simpleComponents/ %i in (*.scss) do node-sass %i %~dpni.css"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "node-sass": "^8.0.0"
-  },
-  "dependencies": {
-    "open-color": "^1.9.1"
-  }
+	"name": "componentassets",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"compile-scss": "find ./simpleComponents/ -name \"*.scss\" -exec node-sass {} {}.css \\;",
+		"compile-scss-windows": "for /r ./simpleComponents/ %i in (*.scss) do node-sass %i %~dpni.css"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"devDependencies": {
+		"node-sass": "^8.0.0"
+	},
+	"dependencies": {
+		"open-color": "^1.9.1"
+	}
 }
