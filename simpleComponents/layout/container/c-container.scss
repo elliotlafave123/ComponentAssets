@@ -22,6 +22,11 @@
   @include respond(phone) {
     padding: 4rem 2rem;
   }
+
+  &--padding-vertical-0 {
+    padding-bottom: 0;
+    padding-top: 0;
+  }
 }
 
 @mixin container-x {
