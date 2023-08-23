@@ -86,6 +86,11 @@
     h3 {
       color: $colour-primary-dark;
     }
+
+    &--long {
+      width: unset;
+      padding: 0 1rem;
+    }
   }
 
   &__content {
