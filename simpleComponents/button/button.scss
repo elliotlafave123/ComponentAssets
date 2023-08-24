@@ -82,6 +82,12 @@
   &--red-secondary {
     @include button-variant($oc-red-1, $oc-red-8, $oc-red-8, $oc-red-8, $oc-white);
   }
+  &--black {
+    @include button-variant($oc-black, $oc-white, $oc-black, $oc-white, $oc-white);
+  }
+  &--linkedin {
+    @include button-variant($linkedin-blue, $colour-white, $linkedin-blue, $oc-white, $linkedin-blue);
+  }
 
   // Button Sizes
   &--small {
