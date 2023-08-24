@@ -5,6 +5,10 @@
   padding-top: 8rem;
   background-color: #000000;
 
+  @include respond(tab-port) {
+    padding-top: 4rem;
+  }
+
   a {
     color: #ffffff;
 
