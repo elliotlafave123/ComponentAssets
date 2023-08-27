@@ -27,6 +27,15 @@ h6 {
   @include typography($primary-font, $heading-color, bold);
 }
 
+a {
+  color: #dd94ff;
+
+  &:hover {
+    color: #d06cffd0;
+    text-decoration: none;
+  }
+}
+
 h1 {
   font-size: 4rem;
   margin-bottom: 2.5rem;
