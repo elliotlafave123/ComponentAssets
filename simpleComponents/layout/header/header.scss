@@ -1,20 +1,63 @@
 @import "../container/c-container.scss";
 @import "../../../sass/imports.scss";
 
+// Reset and variables
+$base-color: #ffffff;
+$dark-bg: #000000;
+$hover-bg: #2c2c2c;
+$base-transition: 0.3s ease-in-out;
+$dark-accent: #7149e9;
+$font-stack: "Roboto", sans-serif;
+
+// Mixins for responsive design
+@mixin respond($breakpoint) {
+  @if $breakpoint == tab-port {
+    @media (max-width: 900px) {
+      @content;
+    }
+  }
+}
+
+.c-accessibility-menu {
+  background-color: $dark-accent;
+
+  &__item {
+    text-align: center;
+  }
+
+  &__link {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    font-size: 0.875rem;
+
+    &:focus {
+      color: #ffffff;
+      text-decoration: none;
+      height: auto;
+      position: static;
+      width: auto;
+    }
+  }
+}
+
+// Main header styles
 .c-header {
   @include container-x;
-  display: flex;
-  flex-direction: column;
-  background-color: #000000;
-  color: #ffffff;
-  font-family: "Roboto", sans-serif;
+  background-color: $dark-bg;
+  color: $base-color;
+  font-family: $font-stack;
   position: fixed;
-  top: 0;
-  z-index: 100;
   width: 100%;
-  transition: transform 0.3s ease-in-out;
+  transition: transform $base-transition;
+  z-index: 10;
 
   @include respond(tab-port) {
+    position: fixed;
+    width: 100vw;
     position: fixed;
     top: 0;
     width: 100vw;
@@ -28,6 +71,10 @@
     }
   }
 
+  &__mobile-chevron {
+    font-size: 16px;
+  }
+
   &__top {
     display: flex;
     justify-content: space-between;
@@ -36,6 +83,7 @@
     @include respond(tab-port) {
       flex-direction: column;
       width: 100%;
+      padding: 10px 2.5rem;
 
       .c-header--open & {
         gap: 33px;
@@ -48,6 +96,7 @@
     justify-content: space-between;
     padding: 16px 0 0 0;
     background-color: #000000;
+    z-index: 100;
 
     @include respond(tab-port) {
       display: none;
@@ -79,7 +128,7 @@
       align-items: center;
       text-decoration: none;
 
-      p {
+      span {
         color: #ffffff;
         font-size: 1.125rem;
         margin: 0;
@@ -155,6 +204,7 @@
           box-shadow: none;
           width: calc(100vw - 95px);
           margin-left: 15px;
+          margin-bottom: 0;
         }
 
         > :last-child {
@@ -186,7 +236,12 @@
       border-bottom: 1px solid transparent;
 
       @include respond(tab-port) {
-        padding: 10px 0;
+        padding: 1.4rem 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-top: 1px solid #4f4f4f;
+        border-bottom: 1px solid #4f4f4f;
       }
 
       .c-header__chevron {
@@ -232,10 +287,6 @@
           flex-direction: column;
         }
 
-        &.is-primary {
-          margin: 15px 0;
-        }
-
         &.is-primary > .c-header__navigation-link {
           .c-header__chevron {
             transform: rotate(-180deg);
@@ -246,33 +297,10 @@
   }
 }
 
-.c-accessibility-menu {
-  background-color: #7149e9;
-
-  &__item {
-    text-align: center;
-  }
-
-  &__link {
-    position: absolute;
-    left: -10000px;
-    top: auto;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-    font-size: 0.875rem;
-
-    &:focus {
-      color: #ffffff;
-      text-decoration: none;
-      height: auto;
-      position: static;
-      width: auto;
-    }
-  }
-
-  &:focus-within {
-    padding: 10px 0;
+.c-header__sub-navigation .c-header__navigation-link {
+  @include respond(tab-port) {
+    border-top: none;
+    border-bottom: none;
   }
 }
 
