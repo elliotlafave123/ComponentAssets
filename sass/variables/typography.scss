@@ -7,8 +7,8 @@ body {
 // Variables
 $primary-font: "Open Sans", sans-serif;
 $secondary-font: "Open Sans", serif;
-$heading-color: #ffffff;
-$paragraph-color: $oc-gray-2;
+$heading-color: $text-light;
+$paragraph-color: $text-light;
 
 // Mixin for typography
 @mixin typography($font-family, $color, $font-weight: normal) {
