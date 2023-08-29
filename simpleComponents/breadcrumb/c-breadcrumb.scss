@@ -1,24 +1,48 @@
-.breadcrumb {
+.c-breadcrumb {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   margin-bottom: 2rem;
 
-  p {
-    font-size: 1rem;
-    letter-spacing: 1px;
-    color: $text-light;
-    margin: 0;
+  &__margin {
+    @include container-x;
   }
 
   i {
-    font-size: 1rem;
-    color: $color-primary;
     margin: 0;
+    margin-right: 0.5rem;
+    margin-left: 0.5rem;
   }
 
-  i,
-  p {
-    margin-right: 0.7rem;
+  a,
+  span {
+    margin-bottom: 8px;
+  }
+
+  a,
+  span {
+    font-size: 1rem;
+    letter-spacing: 1px;
+  }
+
+  span {
+    color: $text-light;
+  }
+
+  i {
+    font-size: 15px;
+    color: $color-primary;
+    margin-bottom: 0;
+  }
+
+  a {
+    color: $oc-violet-2;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+
+    &:hover {
+      color: $oc-violet-3;
+      text-decoration: none;
+    }
   }
 }
