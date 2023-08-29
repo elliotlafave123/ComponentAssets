@@ -63,6 +63,10 @@
   }
 }
 
+.c-container-x {
+  @include container-x;
+}
+
 #main {
   max-width: 100vw;
 }
