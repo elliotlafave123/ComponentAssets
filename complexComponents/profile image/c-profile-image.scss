@@ -1,0 +1,45 @@
+// Profile image styles
+.c-profile-image {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  p {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #ffffff !important;
+    margin: 0 !important;
+  }
+}
+
+// Profile image color variations
+.c-profile-image--blue {
+  background-color: #0052cc;
+}
+
+.c-profile-image--teal {
+  background-color: #00a3bf;
+}
+
+.c-profile-image--green {
+  background-color: #00875a;
+}
+
+.c-profile-image--yellow {
+  background-color: #ff991f;
+}
+
+.c-profile-image--red {
+  background-color: #de350c;
+}
+
+.c-profile-image--purple {
+  background-color: #7149e9;
+}
+
+.c-profile-image--darkBlue {
+  background-color: #172b4e;
+}
