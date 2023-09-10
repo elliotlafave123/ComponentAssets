@@ -9,15 +9,6 @@ $base-transition: 0.3s ease-in-out;
 $dark-accent: #7149e9;
 $font-stack: "Roboto", sans-serif;
 
-// Mixins for responsive design
-@mixin respond($breakpoint) {
-  @if $breakpoint == tab-port {
-    @media (max-width: 900px) {
-      @content;
-    }
-  }
-}
-
 .c-accessibility-menu {
   background-color: $dark-accent;
 
@@ -83,18 +74,22 @@ $font-stack: "Roboto", sans-serif;
     @include respond(tab-port) {
       flex-direction: column;
       width: 100%;
-      padding: 10px 2.5rem;
+      padding: 10px 2.5rem 10px 0;
 
       .c-header--open & {
         gap: 33px;
       }
+    }
+
+    @include respond(phone) {
+      padding: 10px 1.5rem 10px 1.5rem;
     }
   }
 
   &__bottom {
     display: flex;
     justify-content: space-between;
-    padding: 16px 0 0 0;
+    padding: 10px 0 0 0;
     background-color: #000000;
     z-index: 100;
 
@@ -109,12 +104,15 @@ $font-stack: "Roboto", sans-serif;
       flex-direction: column;
       justify-content: flex-start;
       background-color: #000000;
-      padding-left: 2.5rem;
-      padding-right: 2.5rem;
+      padding: 10px 2.5rem 0px 2.5rem;
 
       .c-header--open & {
         display: flex;
       }
+    }
+
+    @include respond(phone) {
+      padding: 10px 1.5rem 10px 1.5rem;
     }
   }
 
