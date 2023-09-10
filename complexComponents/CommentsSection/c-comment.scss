@@ -1,22 +1,33 @@
 // Single comment
 .c-comment {
-  padding: 1.5rem 0;
-  color: $text-light;
-  border-radius: 0.3rem;
-  font-family: inherit;
-  display: flex;
-  justify-content: space-between;
-  position: relative;
+  &__body {
+    padding: 1.5rem 0;
+    color: $text-light;
+    border-radius: 0.3rem;
+    font-family: inherit;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
 
-  @include respond(tab-port) {
-    padding: 1.5rem 1rem 1.5rem 0;
-    flex-direction: column-reverse;
-    justify-content: flex-start;
+    @include respond(tab-port) {
+      padding: 1.5rem 1rem 1.5rem 0;
+      flex-direction: column-reverse;
+      justify-content: flex-start;
+    }
+  }
+
+  &__replies {
+    margin-left: 1rem;
   }
 
   &:focus {
     outline: 2px solid #000;
     outline-offset: 2px;
+  }
+
+  &__replied-to {
+    font-weight: 500;
+    color: $oc-violet-5;
   }
 
   &__interactions {
@@ -114,6 +125,7 @@
       flex-direction: row;
       width: max-content;
       display: inline-flex;
+      padding-left: 0;
     }
 
     p {
