@@ -66,6 +66,10 @@
         color: $oc-red-5;
       }
     }
+
+    &--active i.fa-sharp {
+      color: $oc-violet-4;
+    }
   }
 
   &__main {
@@ -126,7 +130,7 @@
     }
 
     i {
-      font: 1.4rem sans-serif;
+      font-size: 0.8rem;
       color: $colour-primary-light;
     }
   }
