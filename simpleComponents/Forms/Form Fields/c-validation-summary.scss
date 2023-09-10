@@ -1,0 +1,50 @@
+.c-validation-summary {
+  margin-bottom: 1rem;
+  padding: 1rem;
+  background-color: #fff9fa;
+  border: 1px solid #a71627;
+  color: #a71627;
+  border-radius: 4px;
+  line-height: 1.5;
+  text-align: left;
+  width: 100%;
+  display: grid;
+
+  &__title {
+    margin-bottom: 0;
+    line-height: 1;
+    font-size: 1.2rem;
+    font-weight: 500;
+  }
+
+  &__icon {
+    font-size: 1.6rem;
+    margin-right: 10px;
+    line-height: 1;
+  }
+
+  &__top {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+
+  ul {
+    margin-left: 30px;
+
+    li > a {
+      color: #a71627;
+      text-decoration: underline;
+      text-decoration-color: #a71627;
+
+      // on hover
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+
+    @include respond(tab-port) {
+      margin-left: 0;
+    }
+  }
+}

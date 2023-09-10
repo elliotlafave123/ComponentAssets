@@ -5,8 +5,21 @@
     flex-direction: column;
     margin-bottom: 5rem;
 
+    &--small {
+      width: 50%;
+    }
+
     &--small-margin {
-      margin-bottom: 0.5rem;
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__validation-summary {
+    color: red;
+    margin-bottom: 20px;
+
+    a {
+      color: red;
     }
   }
 
@@ -35,5 +48,13 @@
     font-size: 14px;
     font-weight: 400;
     margin-bottom: 14px;
+  }
+
+  &__error-message {
+    color: $color-form-false;
+    font-size: 14px;
+    font-weight: 400;
+    margin-top: 0.25rem;
+    display: none;
   }
 }

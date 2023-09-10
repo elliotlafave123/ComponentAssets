@@ -61,6 +61,18 @@
   &--small {
     width: 700px;
   }
+
+  &--x-small {
+    max-width: 600px;
+
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 1rem;
+  }
+
+  &--centered {
+    margin: 0 auto;
+  }
 }
 
 .c-container-x {

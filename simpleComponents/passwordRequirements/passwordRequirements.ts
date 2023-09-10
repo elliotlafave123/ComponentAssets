@@ -50,22 +50,5 @@ const validatePassword = () => {
 // Event listener for password input change
 passwordInput.addEventListener("input", validatePassword);
 
-// Event listener to toggle password visibility
-showPasswordEye.addEventListener("click", () => {
-  passwordInput.type = "text";
-  showPasswordEye.style.display = "none";
-  hidePasswordEye.style.display = "block";
-});
-
-hidePasswordEye.addEventListener("click", () => {
-  passwordInput.type = "password";
-  hidePasswordEye.style.display = "none";
-  showPasswordEye.style.display = "block";
-});
-
 // Initialize hidden state of error message
 errorMessagePassword.classList.add("hidden");
-
-// Initialize hidden state of eye icons
-showPasswordEye.style.display = "block";
-hidePasswordEye.style.display = "none";
