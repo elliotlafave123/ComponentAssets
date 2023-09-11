@@ -135,6 +135,10 @@
       padding: 0;
       margin: 0.6rem 0;
       color: $colour-primary;
+      min-width: 2ch;
+      display: flex;
+      align-items: center;
+      justify-content: center;
 
       @include respond(tab-port) {
         margin: 0 0.6rem;
