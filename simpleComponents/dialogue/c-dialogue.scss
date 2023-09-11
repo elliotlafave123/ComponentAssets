@@ -1,0 +1,32 @@
+.c-dialogue {
+  box-sizing: border-box;
+  padding: 22px 30px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  border-radius: 4px;
+
+  &--green {
+    background-color: $oc-gray-8;
+    border: 1px solid #236420;
+    color: #236420;
+  }
+
+  &--red {
+    background-color: $oc-gray-8;
+    border: 1px solid #a71627;
+    color: #a71627;
+  }
+
+  &__title {
+    margin: 0;
+    font-weight: 500;
+    font-size: 18px;
+    font-family: "Roboto", sans-serif;
+  }
+
+  &__icon {
+    margin-right: 17px;
+    font-size: 25px;
+  }
+}
