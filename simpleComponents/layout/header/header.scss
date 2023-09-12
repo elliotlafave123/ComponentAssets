@@ -9,32 +9,6 @@ $base-transition: 0.3s ease-in-out;
 $dark-accent: #7149e9;
 $font-stack: "Roboto", sans-serif;
 
-.c-accessibility-menu {
-  background-color: $dark-accent;
-
-  &__item {
-    text-align: center;
-  }
-
-  &__link {
-    position: absolute;
-    left: -10000px;
-    top: auto;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-    font-size: 0.875rem;
-
-    &:focus {
-      color: #ffffff;
-      text-decoration: none;
-      height: auto;
-      position: static;
-      width: auto;
-    }
-  }
-}
-
 // Main header styles
 .c-header {
   @include container-x;
@@ -62,6 +36,10 @@ $font-stack: "Roboto", sans-serif;
     }
   }
 
+  &--open {
+    padding-bottom: 2rem;
+  }
+
   &__mobile-chevron {
     font-size: 16px;
   }
@@ -70,19 +48,15 @@ $font-stack: "Roboto", sans-serif;
     display: flex;
     justify-content: space-between;
     padding: 10px 0;
+    position: relative;
 
     @include respond(tab-port) {
       flex-direction: column;
       width: 100%;
-      padding: 10px 2.5rem 10px 0;
 
       .c-header--open & {
         gap: 33px;
       }
-    }
-
-    @include respond(phone) {
-      padding: 10px 1.5rem 10px 1.5rem;
     }
   }
 
@@ -94,13 +68,14 @@ $font-stack: "Roboto", sans-serif;
     z-index: 100;
 
     @include respond(tab-port) {
+      @include container-x;
       display: none;
       box-sizing: border-box;
       position: absolute;
-      top: 111px;
+      top: 144px;
       left: 0;
       width: 100%;
-      height: calc(100vh - 111px);
+      height: calc(100vh - 144px);
       flex-direction: column;
       justify-content: flex-start;
       background-color: #000000;
@@ -109,10 +84,6 @@ $font-stack: "Roboto", sans-serif;
       .c-header--open & {
         display: flex;
       }
-    }
-
-    @include respond(phone) {
-      padding: 10px 1.5rem 10px 1.5rem;
     }
   }
 
@@ -151,8 +122,6 @@ $font-stack: "Roboto", sans-serif;
     z-index: 200;
 
     &-link {
-      color: #ffffff;
-      font-size: 1rem;
       text-decoration: none;
       margin-left: 15px;
 
@@ -279,7 +248,14 @@ $font-stack: "Roboto", sans-serif;
         }
       }
 
+      &--mobile-only {
+        display: none;
+      }
+
       @include respond(tab-port) {
+        &--mobile-only {
+          display: block;
+        }
         .c-header__sub-navigation {
           display: flex;
           flex-direction: column;
@@ -299,28 +275,5 @@ $font-stack: "Roboto", sans-serif;
   @include respond(tab-port) {
     border-top: none;
     border-bottom: none;
-  }
-}
-
-.c-mobile-menu-toggle {
-  position: fixed;
-  top: 21px;
-  right: 2.5rem;
-  background-color: transparent;
-  color: #ffffff;
-  border: none;
-  cursor: pointer;
-  padding: 0;
-  margin: 0;
-  display: none;
-  font-size: 1.55rem;
-  z-index: 101;
-
-  &:hover {
-    color: #ffffff;
-  }
-
-  @include respond(tab-port) {
-    display: block;
   }
 }

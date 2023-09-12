@@ -1,0 +1,22 @@
+.c-mobile-menu-toggle {
+  position: absolute;
+  top: 1.1rem;
+  right: 0;
+  background-color: transparent;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+  display: none;
+  font-size: 1.55rem;
+  z-index: 101;
+
+  &:hover {
+    color: #ffffff;
+  }
+
+  @include respond(tab-port) {
+    display: block;
+  }
+}

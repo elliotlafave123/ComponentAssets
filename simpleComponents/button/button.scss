@@ -1,3 +1,41 @@
+@mixin button-variant($bg-color, $text-color, $border-color: null, $bg-hover-color: null, $text-hover-color: null) {
+  background: $bg-color;
+  color: $text-color;
+
+  i {
+    color: $text-color;
+  }
+
+  &--with-border {
+    border: 2px solid if($border-color, $border-color, $bg-color);
+    box-sizing: border-box;
+  }
+
+  &--with-shadow {
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  &:hover,
+  &:focus-visible {
+    background: if($bg-hover-color, $bg-hover-color, $text-color);
+    color: if($text-hover-color, $text-hover-color, $bg-color) !important;
+
+    i {
+      color: if($text-hover-color, $text-hover-color, $bg-color);
+    }
+  }
+}
+
+@mixin button-size($padding, $font-size, $icon-font-size, $gap) {
+  padding: $padding;
+  font-size: $font-size;
+  gap: $gap;
+
+  i {
+    font-size: $icon-font-size;
+  }
+}
+
 @import "../../sass/imports.scss";
 
 .c-button {

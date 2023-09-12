@@ -1,0 +1,25 @@
+.c-accessibility-menu {
+  background-color: $dark-accent;
+
+  &__item {
+    text-align: center;
+  }
+
+  &__link {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    font-size: 0.875rem;
+
+    &:focus {
+      color: #ffffff;
+      text-decoration: none;
+      height: auto;
+      position: static;
+      width: auto;
+    }
+  }
+}
