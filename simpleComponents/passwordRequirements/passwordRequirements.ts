@@ -11,27 +11,36 @@ const hidePasswordEye: HTMLElement = document.getElementById("HidePasswordEye")!
 // Function to validate password
 const validatePassword = () => {
   const password = passwordInput.value;
+  console.log(password);
 
   [lengthCheck, upperCheck, numberCheck, specialCheck].forEach((check) => check.classList.remove("checked"));
 
   // Validate length
   if (password.length >= 8) {
     lengthCheck.classList.add("active");
+  } else {
+    lengthCheck.classList.remove("active");
   }
 
   // Validate uppercase and lowercase
   if (/[a-z]/.test(password) && /[A-Z]/.test(password)) {
     upperCheck.classList.add("active");
+  } else {
+    upperCheck.classList.remove("active");
   }
 
   // Validate numbers
   if (/\d/.test(password)) {
     numberCheck.classList.add("active");
+  } else {
+    numberCheck.classList.remove("active");
   }
 
   // Validate special characters
   if (/[!@#$%^&*(),.?":{}|<>]/.test(password)) {
     specialCheck.classList.add("active");
+  } else {
+    specialCheck.classList.remove("active");
   }
 
   // Show/hide error message
