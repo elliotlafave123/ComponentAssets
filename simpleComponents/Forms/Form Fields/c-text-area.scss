@@ -15,4 +15,9 @@
   &::placeholder {
     color: $text-light;
   }
+
+  &--error {
+    border: 2px solid $color-error;
+    padding: 0.625rem;
+  }
 }
