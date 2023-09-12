@@ -8,8 +8,8 @@
 
   &--green {
     background-color: $oc-gray-8;
-    border: 1px solid #236420;
-    color: #236420;
+    border: 1px solid #43bb3d;
+    color: #43bb3d;
   }
 
   &--red {
@@ -20,13 +20,14 @@
 
   &__title {
     margin: 0;
-    font-weight: 500;
-    font-size: 18px;
+    font-weight: 600;
+    font-size: 1.2rem;
     font-family: "Roboto", sans-serif;
+    letter-spacing: 1px;
   }
 
   &__icon {
     margin-right: 17px;
-    font-size: 25px;
+    font-size: 1.4rem;
   }
 }
