@@ -11,6 +11,10 @@
     box-sizing: border-box;
   }
 
+  &--with-shadow {
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
   &:hover,
   &:focus-visible {
     background: if($bg-hover-color, $bg-hover-color, $text-color);
