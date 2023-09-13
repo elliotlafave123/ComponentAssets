@@ -15,4 +15,9 @@
   &::placeholder {
     color: $text-light;
   }
+
+  &:disabled {
+    color: $oc-gray-5;
+    cursor: not-allowed;
+  }
 }
