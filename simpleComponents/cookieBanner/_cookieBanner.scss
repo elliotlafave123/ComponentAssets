@@ -1,58 +1,94 @@
-.cookie-banner {
+.c-cookie-banner {
   position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100vw;
-  background-color: $color-primary-dark;
-  color: #ffffff;
-  padding: 3rem;
-  display: flex;
-  z-index: 100000;
-  justify-content: space-between;
+  bottom: 40px;
+  left: 40px;
+  background-color: $oc-gray-8;
+  z-index: 1000;
+  padding: 20px 26px;
+  border-radius: 6px;
+  border: 1px solid $oc-gray-6;
 
   @include respond(tab-port) {
-    flex-direction: column;
-    align-items: center;
+    width: 100vw;
+    left: 0;
+    bottom: 0;
+    border-radius: 0;
   }
 
-  &-text-container {
-    font-weight: 400;
-    font-size: 1.5rem;
-    display: flex;
-    flex-direction: column;
-    word-wrap: break-word;
+  &--hidden {
+    display: none;
+  }
 
-    span {
-      margin-bottom: 1.2rem;
-      font-size: 1.55rem;
+  &--minimized {
+    height: min-content;
+
+    .c-cookie-banner__text:not(.no-hide) {
+      display: none;
     }
   }
 
-  &-interactions {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  button {
-    background-color: #ffffff;
-    color: #000000;
-    padding: 1.2rem 3rem;
-    border-radius: 0.9rem;
-    font-size: 1.7rem;
-    display: block;
-
-    @include respond(tab-port) {
-      margin-top: 2rem;
-      margin-bottom: 1rem;
-    }
-  }
-
-  a {
+  &__title {
     color: #ffffff;
-    font-size: 1.5rem;
-    display: block;
-    text-align: center;
-    text-decoration: underline;
+    margin-bottom: 1.5rem;
   }
+
+  &__text {
+    color: $color-white;
+    max-width: 400px;
+    line-height: 24px;
+    font-weight: 400;
+    margin-bottom: 1.5rem;
+  }
+
+  &__actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+  }
+
+  &__toggle {
+    display: flex;
+    gap: 5px;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  &__minimize {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #ffffff;
+    font-size: 1.2rem;
+    margin-top: 8px;
+
+    &:hover {
+      color: #cccccc;
+    }
+  }
+
+  &__expand {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #ffffff;
+    font-size: 1.2rem;
+    margin-top: 7px;
+
+    &:hover {
+      color: #cccccc;
+    }
+  }
+}
+
+.c-cookie-banner--minimized .c-cookie-banner__minimize {
+  display: none;
+}
+
+.c-cookie-banner--minimized .c-cookie-banner__expand {
+  display: block;
 }
