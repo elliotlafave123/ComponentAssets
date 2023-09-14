@@ -16,6 +16,12 @@
     }
   }
 
+  &--highlight {
+    outline: 3px solid $colour-outline;
+    outline-offset: 10px;
+    border-radius: 1px;
+  }
+
   &__replies {
     position: relative;
     padding-left: 1rem;
