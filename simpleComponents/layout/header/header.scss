@@ -38,6 +38,10 @@ $font-stack: "Roboto", sans-serif;
 
   &--open {
     padding-bottom: 2rem;
+
+    .c-user-profile {
+      display: flex;
+    }
   }
 
   &__mobile-chevron {
