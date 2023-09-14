@@ -97,6 +97,10 @@
     justify-content: center;
   }
 
+  &--highlighted {
+    outline: 4px solid $colour-outline;
+  }
+
   // Button Variants
   &--ghost {
     @include button-variant(rgba(0, 0, 0, 0), $oc-white, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), $oc-white);
