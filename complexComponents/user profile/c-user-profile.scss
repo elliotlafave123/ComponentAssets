@@ -1,0 +1,72 @@
+.c-user-profile {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 9px;
+
+  @include respond(tab-port) {
+    display: none;
+  }
+
+  &__toggle {
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+
+    @include respond(tab-port) {
+      display: none;
+    }
+
+    h3 {
+      margin: 0;
+      margin-right: 13px;
+      font-size: 16px;
+      color: $color-white;
+    }
+
+    &-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: $colour-primary;
+      border-radius: 50%;
+      height: 34px;
+      width: 34px;
+
+      i {
+        font-size: 24px;
+        line-height: 50px;
+        color: $color-black;
+      }
+    }
+  }
+
+  &__links {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-top: 36px;
+
+    a {
+      color: #337ab7;
+      text-decoration: none;
+      margin-bottom: 13px;
+      font-family: "Poppins", sans-serif;
+      font-size: 1rem;
+      color: $color-white;
+
+      &:hover {
+        text-decoration: underline;
+      }
+
+      &.logoutLink {
+        color: $oc-gray-4;
+        margin-top: 13px;
+        margin-bottom: 0;
+      }
+    }
+  }
+}
