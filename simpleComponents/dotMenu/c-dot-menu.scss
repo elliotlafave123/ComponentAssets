@@ -20,12 +20,14 @@
   &__button {
     color: $text-light;
     border: none;
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
     padding: 10px;
     border-bottom: 1px solid $oc-gray-6;
     background-color: $oc-gray-8;
     cursor: pointer;
-    width: max-content;
+    width: 100%;
 
     i {
       margin-right: 4px;
