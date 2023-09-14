@@ -15,6 +15,12 @@
     border: 1px solid $oc-gray-6;
     border-radius: 5px;
     width: max-content;
+    z-index: 3;
+
+    @include respond(tab-port) {
+      top: unset;
+      bottom: 30px;
+    }
   }
 
   &__button {
