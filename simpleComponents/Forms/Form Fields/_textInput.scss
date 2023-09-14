@@ -5,19 +5,37 @@
   color: $text-light;
   height: 44px;
   padding: 0.625rem;
+  padding-right: 2rem; /* added padding to make space for the icon */
   width: 100%;
+}
 
-  &:focus {
-    border: 2px solid $color-primary;
-    padding: 0.625rem;
-  }
+.c-text-input:focus {
+  border: 2px solid $color-primary;
+  padding: 0.625rem;
+  padding-right: 2rem; /* maintained padding on focus */
+}
 
-  &::placeholder {
-    color: $text-light;
-  }
+.c-text-input::placeholder {
+  color: $text-light;
+}
 
-  &:disabled {
-    color: $oc-gray-5;
-    cursor: not-allowed;
-  }
+.c-text-input:disabled {
+  color: $oc-gray-5;
+  cursor: not-allowed;
+}
+
+.c-input-container {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+.c-input-icon {
+  position: absolute;
+  color: $oc-gray-5;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1rem;
+  pointer-events: none; /* added to ensure the icon doesn't interfere with input interactions */
 }
