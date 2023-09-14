@@ -1,0 +1,43 @@
+.c-dot-menu {
+  position: relative;
+  &__toggle {
+    background-color: transparent;
+    border: none;
+    color: $text-light;
+  }
+
+  &__content {
+    border: none;
+    display: none;
+    position: absolute;
+    top: 30px;
+    right: 0;
+    border: 1px solid $oc-gray-6;
+    border-radius: 5px;
+    width: max-content;
+  }
+
+  &__button {
+    color: $text-light;
+    border: none;
+    display: block;
+    padding: 10px;
+    border-bottom: 1px solid $oc-gray-6;
+    background-color: $oc-gray-8;
+    cursor: pointer;
+    width: max-content;
+
+    i {
+      margin-right: 4px;
+    }
+  }
+
+  &__button:last-child {
+    border-bottom: none;
+    border-radius: 0 0 5px 5px;
+  }
+
+  &__button:first-child {
+    border-radius: 5px 5px 0 0;
+  }
+}
