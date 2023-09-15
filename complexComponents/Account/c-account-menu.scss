@@ -1,0 +1,23 @@
+.c-account-menu {
+  &__item {
+    padding-bottom: 1rem;
+
+    &--large-margin {
+      margin-top: 1rem;
+    }
+  }
+
+  &__link {
+    font-size: 1rem;
+    color: $text-light;
+
+    &--active {
+      font-weight: 600;
+      color: $color-primary-light;
+    }
+
+    &--danger {
+      color: $color-error;
+    }
+  }
+}
