@@ -31,6 +31,10 @@ $font-stack: "Roboto", sans-serif;
   &--hidden {
     transform: translateY(-100%);
 
+    .c-user-profile {
+      display: none;
+    }
+
     @include respond(tab-port) {
       transform: translateY(0);
     }
