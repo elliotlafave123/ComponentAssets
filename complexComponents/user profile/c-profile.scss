@@ -28,6 +28,17 @@
   &__container {
     display: flex;
     align-items: flex-start;
+
+    &--with-joinedon {
+      .c-profile__name {
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+      }
+
+      .c-profile__joined {
+        margin-top: 0;
+      }
+    }
   }
 
   &-image {
@@ -64,9 +75,15 @@
       margin-bottom: 10px;
     }
 
-    span {
-      font-size: 14px;
+    .c-profile__displayname {
+      font-size: 16px;
+      font-weight: 400;
       color: $color-primary-mid;
+    }
+
+    .c-profile__joined {
+      font-size: 14px;
+      color: $oc-gray-6;
     }
   }
 }

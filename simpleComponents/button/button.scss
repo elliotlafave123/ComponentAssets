@@ -106,6 +106,10 @@
     @include button-variant(rgba(0, 0, 0, 0), $oc-white, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), $oc-white);
     box-shadow: none;
   }
+  &--ghost-gray-text {
+    @include button-variant(rgba(0, 0, 0, 0), $oc-gray-5, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), $oc-gray-5);
+    box-shadow: none;
+  }
   &--primary {
     @include button-variant($colour-primary, $colour-white, $colour-primary, $colour-primary-light, $colour-primary);
   }
