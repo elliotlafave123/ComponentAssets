@@ -46,6 +46,7 @@ $font-stack: "Roboto", sans-serif;
 
   &__mobile-chevron {
     font-size: 16px;
+    margin-right: 10px;
   }
 
   &__top {
@@ -83,7 +84,6 @@ $font-stack: "Roboto", sans-serif;
       flex-direction: column;
       justify-content: flex-start;
       background-color: #000000;
-      padding: 10px 2.5rem 0px 2.5rem;
 
       .c-header--open & {
         display: flex;
@@ -121,8 +121,6 @@ $font-stack: "Roboto", sans-serif;
   }
 
   &__authentication {
-    display: flex;
-    align-items: center;
     z-index: 200;
 
     &-link {
@@ -229,6 +227,10 @@ $font-stack: "Roboto", sans-serif;
         background-color: #2c2c2c;
         text-decoration: underline;
         color: #ffffff;
+
+        @include respond(tab-port) {
+          text-decoration: none;
+        }
       }
     }
 
@@ -245,6 +247,10 @@ $font-stack: "Roboto", sans-serif;
 
         &.is-primary > .c-header__navigation-link {
           border-bottom: 1px solid #7149e9;
+
+          @include respond(tab-port) {
+            border-bottom: 1px solid #4f4f4f;
+          }
 
           .c-header__chevron {
             transform: rotate(-180deg);
