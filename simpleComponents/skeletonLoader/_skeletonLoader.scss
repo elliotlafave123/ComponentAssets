@@ -67,3 +67,26 @@
     background-color: hsl(210, 9%, 40%);
   }
 }
+
+.loading-animation {
+  overflow: hidden;
+  background: $oc-gray-6;
+}
+
+.loading-animation::before {
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  animation: loading 1s infinite;
+  background: linear-gradient(to right, transparent, #d9d9d9, transparent);
+}
+
+@keyframes loading {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
