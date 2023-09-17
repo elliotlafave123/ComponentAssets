@@ -1,5 +1,22 @@
 // Single comment
 .c-comment {
+  .c-profile-image {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 1rem;
+
+    p {
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: #ffffff !important;
+      margin: 0 !important;
+    }
+  }
+
   &__body {
     padding: 1.7rem 0 0.8rem 0;
     color: $text-light;
@@ -218,47 +235,3 @@
 }
 
 // Profile image
-.c-profile-image {
-  width: 2.5rem;
-  height: 2.5rem;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-right: 1rem;
-
-  p {
-    font-size: 1.6rem;
-    font-weight: 600;
-    color: #ffffff !important;
-    margin: 0 !important;
-  }
-
-  &--blue {
-    background-color: #0052cc;
-  }
-
-  &--teal {
-    background-color: #00a3bf;
-  }
-
-  &--green {
-    background-color: #00875a;
-  }
-
-  &--yellow {
-    background-color: #ff991f;
-  }
-
-  &--red {
-    background-color: #de350c;
-  }
-
-  &--purple {
-    background-color: #7149e9;
-  }
-
-  &--darkBlue {
-    background-color: #172b4e;
-  }
-}
