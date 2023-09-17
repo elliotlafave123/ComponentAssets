@@ -10,7 +10,7 @@
   border: 1px solid $oc-gray-6;
   font-family: "Poppins", sans-serif;
   padding: 1.4rem;
-  min-width: 280px;
+  min-width: 350px;
 
   @include respond(tab-port) {
     position: static;
@@ -28,6 +28,7 @@
   &__container {
     display: flex;
     align-items: flex-start;
+    gap: 1rem;
 
     &--with-joinedon {
       .c-profile__name {
@@ -49,13 +50,43 @@
     height: 55px;
     background-color: $colour-primary;
     border-radius: 50%;
+    box-sizing: border-box;
 
     &__text {
-      font-size: 3rem;
+      font-size: 1.5rem;
       color: $color-white;
-      margin-right: 10px;
       font-family: "Poppins", sans-serif;
       font-weight: 600;
+      margin: 0;
+      line-height: 55px;
+    }
+
+    &--blue {
+      background-color: #0052cc;
+    }
+
+    &--teal {
+      background-color: #00a3bf;
+    }
+
+    &--green {
+      background-color: #00875a;
+    }
+
+    &--yellow {
+      background-color: #ff991f;
+    }
+
+    &--red {
+      background-color: #de350c;
+    }
+
+    &--purple {
+      background-color: #7149e9;
+    }
+
+    &--darkBlue {
+      background-color: #172b4e;
     }
   }
 
