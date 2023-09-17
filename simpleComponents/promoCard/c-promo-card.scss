@@ -1,11 +1,11 @@
 .c-promo-card {
   position: relative;
   color: $text-light;
-  background-color: var(--link-card-background);
+  background-color: $oc-gray-8;
+  border: 1px solid $oc-gray-6;
   border-radius: 0.5rem;
   padding: 1.5rem 2rem;
   transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
-  box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;
 
   &__content {
     display: flex;
