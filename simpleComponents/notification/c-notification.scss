@@ -25,9 +25,15 @@
   }
 
   &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 31px;
+  }
+
+  &__heading {
     display: inline-flex;
     align-items: center;
-    margin-bottom: 31px;
     flex-wrap: wrap;
 
     h1 {
