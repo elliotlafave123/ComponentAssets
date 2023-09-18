@@ -1,4 +1,5 @@
 .c-notification {
+  position: relative;
   display: flex;
   justify-content: flex-start;
   width: max-content;
@@ -7,6 +8,11 @@
   border: none;
   padding: 18px 20px;
   border-radius: 8px;
+
+  @include respond(tab-port) {
+    width: 100%;
+    padding: 0;
+  }
 
   &:hover {
     background-color: $colour-primary-dark;
@@ -19,9 +25,10 @@
   }
 
   &__header {
-    display: flex;
+    display: inline-flex;
     align-items: center;
     margin-bottom: 31px;
+    flex-wrap: wrap;
 
     h1 {
       font-family: "Rubik", sans-serif;
@@ -52,6 +59,14 @@
   &__details {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
+
+    @include respond(tab-port) {
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      gap: 5px;
+    }
   }
 
   &__not-seen {
@@ -60,11 +75,19 @@
     height: 8px;
     border-radius: 50%;
     background-color: $color-error;
+    margin-left: 10px;
+
+    @include respond(tab-port) {
+      position: absolute;
+      top: 5px;
+      right: 5px;
+    }
   }
 
   &__profile-img {
     width: 45px;
     height: 45px;
+    min-width: 45px;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -80,13 +103,11 @@
     font-size: 1.2rem;
     font-weight: 500;
     margin-right: 14px;
-    flex-grow: 1;
   }
 
   &__message {
     color: $oc-gray-5;
     font-size: 16px;
-    flex-grow: 2;
     margin-right: 10px;
   }
 
