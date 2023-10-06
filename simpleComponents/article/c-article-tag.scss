@@ -1,0 +1,13 @@
+.c-article-tag {
+  background-color: var(--primary-mid);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: max-content;
+  padding: 6px 9px;
+
+  span {
+    color: $colour-primary;
+    font-weight: 600;
+  }
+}

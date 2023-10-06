@@ -1,0 +1,32 @@
+.c-article-meta {
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+
+  i {
+    margin-top: 2px;
+  }
+
+  &__date {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: $oc-gray-4;
+  }
+
+  &__dot {
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    background-color: $oc-gray-4;
+  }
+
+  &__comments {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--primary-mid);
+    font-weight: 400;
+  }
+}

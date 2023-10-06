@@ -1,5 +1,5 @@
 .article-layout {
-  @include container-x;
+  @include centered-container;
   display: grid;
   grid-template-columns: auto 225px;
   gap: 80px;
