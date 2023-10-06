@@ -1,0 +1,31 @@
+.c-article-author {
+  margin: 55px 0 80px 0;
+  position: relative;
+
+  &::after {
+    content: "";
+    display: block;
+    height: 5px;
+    width: 65px;
+    position: absolute;
+    left: 0;
+    bottom: -20px;
+    background-color: $color-primary;
+  }
+
+  &__name {
+    font-family: Rubik, sans-serif;
+    font-size: 1.125rem;
+    font-weight: 500;
+    margin: 0 0 11px 0;
+  }
+
+  &__role {
+    font-family: Rubik, sans-serif;
+    font-size: 0.938rem;
+    font-weight: 400;
+    color: $oc-gray-4;
+    margin: 0;
+    margin-bottom: 22px;
+  }
+}
