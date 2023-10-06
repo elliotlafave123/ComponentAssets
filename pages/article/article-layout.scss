@@ -13,3 +13,9 @@
     margin: 3rem 0;
   }
 }
+
+.article-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
