@@ -1,0 +1,11 @@
+.article-layout {
+  @include container-x;
+  display: grid;
+  grid-template-columns: auto 225px;
+  gap: 80px;
+
+  @include respond(tab-port) {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
